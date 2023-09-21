@@ -1,6 +1,8 @@
 .video {
+  padding-bottom: 180px;
   text-align: center;
   position: relative;
+  overflow: hidden;
 
   &::after {
     content: 'IV';
@@ -10,8 +12,12 @@
 
     @include decorNumber;
   }
-
-  padding-bottom: 180px;
+  @include mediaTablet {
+    &::after {
+      display: none;
+    }
+    padding-bottom: 90px;
+  }
 }
 .video__link {
   position: relative;
@@ -40,6 +46,11 @@
   top: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s ease-in;
+
+  @include mediaTablet {
+    width: 80px;
+    height: 80px;
+  }
 }
 
 .video__link:hover .video__icon {

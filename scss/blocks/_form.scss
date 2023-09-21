@@ -1,9 +1,3 @@
-.cta__form {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 35px 30px;
-}
-
 .form__input {
   height: 50px;
   padding: 12px;
@@ -42,4 +36,10 @@
   line-height: 1.23;
   color: $muted;
   text-align: center;
+
+  &--bottom {
+    @include mediaTablet {
+      grid-row: 4/5;
+    }
+  }
 }
