@@ -8,3 +8,20 @@ navBtn.onclick = () => {
   nav.classList.toggle('header__top-row--mobile');
   document.body.classList.toggle('no-scroll');
 };
+
+/*Phone mask*/
+mask('[data-tel-input]');
+
+const phoneInputs = document.querySelectorAll('[data-tel-input]');
+phoneInputs.forEach((elem) => {
+  elem.addEventListener('input', () => {
+    if (elem.value == '+') {
+      elem.value = '';
+    }
+  });
+  elem.addEventListener('blur', () => {
+    if (elem.value == '+') {
+      elem.value = '';
+    }
+  });
+});
